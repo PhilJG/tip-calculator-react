@@ -7,7 +7,7 @@ import { ReactComponent as Logo } from './images/logo.svg'
 
 function App() {
   const [bill, setBill] = useState(0.00);
-  const [people, setPeople] = useState(0);
+  const [people, setPeople] = useState(1);
   const [tip, setTip] = useState(0.00);
   const [customTip, setCustomTip] = useState("")
 
@@ -50,9 +50,17 @@ function App() {
 
     customPercent.classList.toggle("hidden");
     customInput.classList.toggle("hidden");
+
     setCustomTip("");
   }
 
+  const customInput = function (e) {
+    const value = parseFloat(e.target.value)
+
+    setTip(value / 100);
+    console.log(tip);
+
+  }
 
   const handleReset = function () {
     if (people !== 0 || bill !== 0) {
@@ -87,6 +95,7 @@ function App() {
           handleReset={handleReset}
           customClick={customClick}
           setCustomTip={setCustomTip}
+          customInput={customInput}
         />
         <Result
           bill={bill}

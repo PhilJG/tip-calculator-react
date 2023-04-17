@@ -10,7 +10,11 @@ export default function Calculator({
     handlePeople,
     handleTip,
     tipPercentage,
-    entryRef, peopleRef, customClick
+    entryRef,
+    peopleRef,
+    customClick,
+    setCustomTip,
+    customInput
 }) {
 
 
@@ -52,6 +56,7 @@ export default function Calculator({
                     id="customInput"
                     className="percentSelect hidden"
                     type="number"
+                    onChange={customInput}
                 />
             </div>
 
@@ -61,7 +66,7 @@ export default function Calculator({
             </div>
             <div className="input__wrapper">
 
-                <input type="number" className="input__main" placeholder="0" id="people" onChange={handlePeople} />
+                <input type="number" className="input__main" placeholder="1" id="people" onChange={handlePeople} />
 
                 <Person className="input__icon" />
 
