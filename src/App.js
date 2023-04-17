@@ -36,12 +36,18 @@ function App() {
 
   function handleTip(e) {
     const value = e.target.value
-    if (value === "custom") {
-      setTip("");
+    console.log(`tip value: ${value}`);
+
+    if (!tipPercentage.includes(value)) {
+      // setTip("00");
+      const percentValue = value / 100
+      console.log(percentValue);
+
+      setTip(parseFloat(percentValue))
     } else {
       setTip(parseFloat(value))
     }
-    console.log(`tip value: ${tip}`);
+    console.log(`tip value: ${value}`);
   }
 
   const customClick = function () {
@@ -54,13 +60,6 @@ function App() {
     setCustomTip("");
   }
 
-  const customInput = function (e) {
-    const value = parseFloat(e.target.value)
-
-    setTip(value / 100);
-    console.log(tip);
-
-  }
 
   const handleReset = function () {
     if (people !== 0 || bill !== 0) {
@@ -70,6 +69,7 @@ function App() {
       customClick();
       document.getElementById("entry").value = { bill };
       document.getElementById("people").value = { people };
+      document.getElementById("customInput").value = 0
     } else if (people === 0) {
       const addMessage = document.querySelector("#input__message--people");
       addMessage.classList.remove("hidden")
@@ -95,7 +95,6 @@ function App() {
           handleReset={handleReset}
           customClick={customClick}
           setCustomTip={setCustomTip}
-          customInput={customInput}
         />
         <Result
           bill={bill}
