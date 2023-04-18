@@ -13,7 +13,8 @@ export default function Calculator({
     entryRef,
     peopleRef,
     customClick,
-
+    handleCustomTip,
+    handleCustomTipBlur
 }) {
 
 
@@ -40,7 +41,8 @@ export default function Calculator({
                     id="entry"
                     className="input__main"
                     placeholder="0.00"
-                    type="number" ref={entryRef}
+                    type="number"
+                    ref={entryRef}
                     onChange={handleBill}
                 />
                 <Dollar className="input__icon" />
@@ -50,13 +52,17 @@ export default function Calculator({
 
             <div id="tipSelect">
                 {tipButtons}
-                <button className="customPercent" onClick={customClick} >Custom</button>
+                <button
+                    className="customPercent"
+                    onClick={customClick}
+                >Custom</button>
                 <input
                     id="customInput"
                     className="percentSelect hidden"
                     type="number"
-                    onChange={handleTip}
+                    onChange={handleCustomTip}
                     placeholder="0"
+                    onBlur={handleCustomTipBlur}
                 />
             </div>
 

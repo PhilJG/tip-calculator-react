@@ -173,8 +173,8 @@ button {
 }
 
 .percentSelect:hover {
-  background-color: var(--strong-cyan);
   color: var(--very-dark-cyan);
+  background-color: var(--strong-cyan);
 }
 
 .percentSelect:focus {
