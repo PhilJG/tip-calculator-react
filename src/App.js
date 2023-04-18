@@ -9,7 +9,6 @@ function App() {
   const [bill, setBill] = useState(0.00);
   const [people, setPeople] = useState(1);
   const [tip, setTip] = useState(0.00);
-  const [customTip, setCustomTip] = useState("")
 
   const tipPercentage = [
     .05,
@@ -57,7 +56,7 @@ function App() {
     customPercent.classList.toggle("hidden");
     customInput.classList.toggle("hidden");
 
-    setCustomTip("");
+
   }
 
 
@@ -105,7 +104,6 @@ function App() {
           tipPercentage={tipPercentage}
           handleReset={handleReset}
           customClick={customClick}
-          setCustomTip={setCustomTip}
           handleCustomTip={handleCustomTip}
           handleCustomTipBlur={handleCustomTipBlur}
         />
