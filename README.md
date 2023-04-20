@@ -48,11 +48,11 @@ Users should be able to:
 
 ### What I learned
 
-This was was the most challenging FE mento project yet. Despit it not being fully functional I learned alot about Javascript with this one. It would be difficult to pin down which part specifically because of it was quite new for me. And there is still much more imporvement needed which I may add later. I just feel like I got close enough with this one and one to move on to something new and fresh.
+This projet was developed from a Frontend Mentor project with vanilla Javascript. I wanted to do a more complex webapp at the time and this seemed like a good oppertunity. It didn`t really come out how I wanted. After learning react I decided to revisit it.
 
 ### Continued development
 
-I need more practice in reseting the page and figuring out how to remove input fields on refresh. I also need to learn more about regex. Get better at laying out the program structure and logic before starting may help reduce the spagetti code which is abundant in this one.
+One of the difficult challenges from this was moving the props through the different components and rendering the solutions in different components. 
 
 ### Useful resources
 
@@ -63,3 +63,4 @@ I need more practice in reseting the page and figuring out how to remove input f
 
 - Website - [Phil J Gray](https://www.philjgray.ca)
 - Frontend Mentor - [@PhilJG](https://www.frontendmentor.io/profile/PhilJG)
+

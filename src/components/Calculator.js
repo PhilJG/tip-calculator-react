@@ -3,8 +3,7 @@ import { ReactComponent as Person } from "../images/icon-person.svg";
 
 
 export default function Calculator({
-    bill,
-    people,
+
     tip,
     handleBill,
     handlePeople,
