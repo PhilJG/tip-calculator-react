@@ -116,7 +116,7 @@ function App() {
           setTip={setTip}
           handleReset={handleReset} />
       </div>
-      <Attribution />
+      {/* <Attribution /> */}
     </main>
   );
 }
