@@ -1,5 +1,5 @@
 import './App.css';
-import Attribution from './components/Attribution';
+// import Attribution from './components/Attribution';
 import Calculator from './components/Calculator';
 import Result from './components/Result';
 import { useState } from 'react';
